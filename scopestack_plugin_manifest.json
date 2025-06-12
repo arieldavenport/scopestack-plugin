@@ -1,53 +1,52 @@
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/M365CopilotPlugin.schema.json",
-    "manifestVersion": "1.16",
-    "id": "your-plugin-id-guid",
-    "name": {
-        "short": "ScopeStack Plugin",
-        "full": "ScopeStack API Integration for Microsoft 365 Copilot"
-    },
-    "description": {
-        "short": "Query ScopeStack project and quote data from Copilot",
-        "full": "This plugin allows Microsoft 365 Copilot to access ScopeStack's API to retrieve project, quote, and subscription data using secure OAuth 2.0 authentication."
-    },
-    "icons": {
-        "color": "https://yourdomain.com/assets/icon-color.png",
-        "outline": "https://yourdomain.com/assets/icon-outline.png"
-    },
-    "accentColor": "#0078D4",
-    "developer": {
-        "name": "Your Company Name",
-        "websiteUrl": "https://yourcompany.com",
-        "privacyUrl": "https://yourcompany.com/privacy",
-        "termsOfUseUrl": "https://yourcompany.com/terms"
-    },
-    "authorization": {
-        "type": "OAuth2",
-        "oauth2": {
-            "clientId": "cY76Z5D3F9tuhXWTLfGXACG_4FBkO-LOxBwdJ-V5gIc",
-            "clientSecret": "C0Pz5sNwf-k0jaxUi0cCoU2eQPAjRX4799i6IyyaYDs",
-            "scopes": [
-                "read"
-            ],
-            "authorizationUrl": "https://app.scopestack.io/oauth/authorize",
-            "tokenUrl": "https://app.scopestack.io/oauth/token.json",
-            "redirectUrls": [
-                "https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect"
-            ]
-        }
-    },
-    "apis": {
-        "openApi": {
-            "documentUrl": "https://yourdomain.com/openapi/scopestack.yaml"
-        }
-    },
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
-    "validDomains": [
-        "api.scopestack.io",
-        "app.scopestack.io",
-        "yourdomain.com"
-    ]
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/M365CopilotPlugin.schema.json",
+  "manifestVersion": "1.16",
+  "id": "your-plugin-id-guid",
+  "name": {
+    "short": "ScopeStack Plugin",
+    "full": "ScopeStack API Integration for Microsoft 365 Copilot"
+  },
+  "description": {
+    "short": "Query ScopeStack project and quote data from Copilot",
+    "full": "This plugin allows Microsoft 365 Copilot to access ScopeStack's API to retrieve project, quote, and subscription data using secure OAuth 2.0 authentication."
+  },
+  "icons": {
+    "color": "https://yourdomain.com/assets/icon-color.png",
+    "outline": "https://yourdomain.com/assets/icon-outline.png"
+  },
+  "accentColor": "#0078D4",
+  "developer": {
+    "name": "Your Company Name",
+    "websiteUrl": "https://yourcompany.com",
+    "privacyUrl": "https://yourcompany.com/privacy",
+    "termsOfUseUrl": "https://yourcompany.com/terms"
+  },
+  "authorization": {
+    "type": "OAuth2",
+    "oauth2": {
+      "clientId": "cY76Z5D3F9tuhXWTLfGXACG_4FBkO-LOxBwdJ-V5gIc",
+      "scopes": [
+        "read"
+      ],
+      "authorizationUrl": "https://app.scopestack.io/oauth/authorize",
+      "tokenUrl": "https://app.scopestack.io/oauth/token.json",
+      "redirectUrls": [
+        "https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect"
+      ]
+    }
+  },
+  "apis": {
+    "openApi": {
+      "documentUrl": "https://arieldavenport.github.io/scopestack-plugin/scopestack_openapi.yaml"
+    }
+  },
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "api.scopestack.io",
+    "app.scopestack.io",
+    "arieldavenport.github.io"
+  ]
 }
